@@ -3,7 +3,7 @@ Why WebPages?
 
 - [x] **automatic routers**. We DON'T have `urls.py` url mapping *(like we do in Django)*. Instead the web framework search controllers and actions based on convention `controller_name/action_name/...` *(`/blog/view/123/` call `view` action of `Blog` controller with `123` argument)*. To disable controller or model - rename it with leading underscore, like this `controllers/_blog.py`
 - [x] **check broken urls**. We can run command `check urls` to detect broken urls and fix them manually. You don't need to support url mapping to do this extra job
-- [x] we DON't have reusable applications *(like in Django)*. Only root folders `models`, `templates` (views) and `pages` (controllers) where you place all your code. You don't need to think about *"In what app I should place this new model?"*. Have an idea? - Code it!
+- [x] **MVC**. We DON't need to use reusable applications *(like in Django)*. We have root folders `models`, `templates` (views) and `pages` (controllers) where you place all your code. You don't need to think about *"In what app I should place this new model?"*. Have an idea? - Code it!
 - [x] **settings inheritance**. Project has own settings file and can redefine default settings for models and controllers. Settings file contains grouped configuraions per component *(NO global names like in Django)*
 - [x] **generate project from command-line**. And each model/view/controller also sould be. To add new model - we use command-line to create appropriate model, view and controller with appropriate actions and templates for this new model (like in **Ruby on Rails**)
 - [x] **easy migrations**. When we rename field or add new one - we do it in command-line and it save our changes to migration file
